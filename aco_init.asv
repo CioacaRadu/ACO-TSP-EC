@@ -1,9 +1,0 @@
-function [ACOstruct] = aco_init(ACOstruct)
-
-ACOstruct.nr_ants = 20;
-ACOstruct.elite_size = 20;
-ACOstruct.max_number_targets = 20;
-
-
-
-end

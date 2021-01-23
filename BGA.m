@@ -12,7 +12,28 @@
 % RN - the roulette with M sectors 
 % SN - the number of sectors won by each competitor
 % 
-function [the_chosen] = BGA(A, M, P)
+function [the_chosen] = BGA(childs, resolution, pd)
+
+A = 1:1:length(childs);
+M = resolution;
+P = pd;
+
+for i = 1:length(childs)
+
+    if (childs(i) == 0)
+    
+        A(i) = 0;
+        P(i) = 0;
+
+    end
+    
+end
+
+
+A = A(A~=0);
+P = P(P~=0);
+
+
 
 N = length(A);
 % Initialization
@@ -28,12 +49,12 @@ while mu == 1
 end
 % c) Initialize nu - the current position
 nu = 0;
-
 % d) Initialize R - places on the roulette
 RN = zeros(1,M);
 
 % e) Initialize S - number of places for each competitor
 SN = zeros(1,N);
+
 
 % Complete the roulette
 i = 1;
@@ -48,6 +69,8 @@ for n = 1 : N
 end
 
 
-[~,the_chosen] = max(SN)
+[~,c] = max(SN);
+the_chosen = A(c);
+
 
 end
