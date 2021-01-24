@@ -1,0 +1,30 @@
+
+icity = 0;
+
+%%BUCHAREST
+icity = icity+1;
+cities(icity).name = 'Bucuresti';
+cities(icity).lat = 10;
+cities(icity).lon = 10;
+cities(icity).map_x = 10;
+cities(icity).map_y = 10;
+%%
+
+%%CONSTANTA
+icity = icity+1;
+cities(icity).name = 'Bucuresti';
+cities(icity).lat = 10;
+cities(icity).lon = 10;
+cities(icity).map_x = 10;
+cities(icity).map_y = 10;
+%%
+
+
+%%BUCHAREST
+icity = icity+1;
+cities(icity).name = 'Bucuresti';
+cities(icity).lat = 10;
+cities(icity).lon = 10;
+cities(icity).map_x = 10;
+cities(icity).map_y = 10;
+%%

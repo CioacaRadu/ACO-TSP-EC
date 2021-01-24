@@ -55,7 +55,6 @@ function [ACOstruct] = aco_run(ACOstruct)
                     ACOstruct.ants(iant).performance = ACOstruct.ants(iant).performance + ACOstruct.D(current_node,target_child);
                     ACOstruct.tau(current_node,target_child) = ACOstruct.tau(current_node,target_child) + ACOstruct.Q / ACOstruct.ants(iant).performance;
                     ACOstruct.tau(target_child,current_node) = ACOstruct.tau(current_node,target_child);
-                    
                 end
 
             end
@@ -77,11 +76,10 @@ function [ACOstruct] = aco_run(ACOstruct)
             end
        
         end
-        
-        
     ACOstruct.k = ACOstruct.k + 1;
     ACOstruct.BestCost(ACOstruct.k) = BestCost;
     ACOstruct.BestTour = BestTour;
+    map
     
     end
 

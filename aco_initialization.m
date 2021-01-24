@@ -2,18 +2,7 @@ function [ACOstruct] = aco_initialization(ACOstruct)
 
 
 
-    for i = 1:ACOstruct.nr_ants
-        
-        
-       %2.a Choose random departure positions for each ant
-       ACOstruct.ants(i).tour  = [randi(ACOstruct.n_cities,1,1)];
-       
-       %2.c Blocked ants list init (0 = not blocked, 1 = blocked)
-       ACOstruct.ants(i).blocked  = 0;
-       
-       ACOstruct.ants(i).performance  = 0; 
-       
-    end
+   
     
 
     
@@ -29,6 +18,8 @@ function [ACOstruct] = aco_initialization(ACOstruct)
     
     
     ACOstruct.ants_costs = zeros(1,ACOstruct.nr_ants);
+    
+    ACOstruct.BestCost(1:ACOstruct.max_iter) = inf;
 
 
 
