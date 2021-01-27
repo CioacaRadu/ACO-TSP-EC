@@ -78,7 +78,8 @@ function [ACOstruct] = aco_run(ACOstruct)
        
         end
         
-        
+    txt = sprintf('Iteration progress %d/%d', ACOstruct.k,ACOstruct.max_iter);
+    disp(txt);
     ACOstruct.k = ACOstruct.k + 1;
     ACOstruct.BestCost(ACOstruct.k) = BestCost;
     ACOstruct.BestTour = BestTour;

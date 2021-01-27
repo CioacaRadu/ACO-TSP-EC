@@ -14,7 +14,7 @@ for i =1:length(best_trip)-1
     
      line([x1 x2 ],[y1 y2] ,'color','b','LineWidth',3); % Blue line from (4,0) to (4,10)
      
-     txt = sprintf('%d',i);
-     text((x1+x2)/2-10, (y1+y2)/2, txt, 'FontSize', 40, 'color', 'r');
+%      txt = sprintf('%d',i);
+%      text((x1+x2)/2-10, (y1+y2)/2, txt, 'FontSize', 40, 'color', 'r');
 end
 

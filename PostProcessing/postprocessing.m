@@ -22,3 +22,6 @@ for i = 1:length(ACOstruct.BestTour)
     
 end
 disp(txt);
+
+txt = sprintf('Best cost:%f',ACOstruct.BestCost(end));
+disp(txt);
